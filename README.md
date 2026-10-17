@@ -1,96 +1,85 @@
 # Daud Warsame — Student Portfolio
 
-A single-page student portfolio for the WEEK06 HCI lab. It uses HTML and CSS only: no JavaScript, frameworks, downloaded templates, external fonts, or tracking.
+My single-page portfolio for the WEEK06 HCI lab at BINUS University International. The website introduces me, my current learning, and my project ideas.
+
+## Links
+
+- Live website: https://daauudjookar63-tech.github.io/portfolio-week06/
+- GitHub repository: https://github.com/daauudjookar63-tech/portfolio-week06
+- Figma design: https://www.figma.com/design/gCwuD04Tci53ICJ7AKnFkB/Daud-warsame---Portfolia-WEEK06?node-id=1-2110
 
 ## Purpose and audience
 
-The goal is to introduce Daud Abdulkadir Warsame, show his current learning and project ideas, and organise his skills clearly. The audience is lecturers, classmates, and people interested in student collaboration.
+This portfolio shares my background, skills, and learning progress. It is intended for lecturers, classmates, and students interested in working together.
 
-## Planning and design
+## Page sections
 
-The page follows this order: header and navigation, introduction, about, projects, skills, contact, and footer. Visitors can move directly to a section using the navigation. Projects have clear status labels so a proposal is not mistaken for a finished website.
+- Header with navigation
+- Introduction
+- About me
+- Selected projects
+- Skills
+- Contact information
+- Footer
 
-Desktop uses side-by-side content. Mobile stacks sections and keeps every navigation link visible, avoiding a JavaScript menu. The project notes use native HTML `details` and `summary` elements.
+## Projects
 
-Colours:
-- Paper background: `#f6f5ee`
-- Dark green text and buttons: `#1b342e`
-- Muted green: `#53665f`
-- Orange hover accent: `#aa4526`
-- Pale green section: `#e9eddf`
+1. Kaabe School Platform — an HCI group proposal for helping parents find campus information and send admission inquiries.
+2. Personal Study Planner — a planned project for organising courses, notes, and study tasks.
+3. Python Practice — small exercises for developing my programming skills.
 
-Fonts: Arial for body text and headings; Georgia for italic highlights. Both are system fonts, so no font download is required. The initials illustration is intentional; no fake profile photo is used. All SVG artwork was created for this exercise.
+The status labels distinguish proposals and ideas from completed projects.
 
-### Design files
+## Design
 
-`design/desktop-plan.svg` and `design/mobile-plan.svg` are planning artboards made before final packaging. They are editable SVGs, not a Figma or Canva export and not screenshots of the running website. The `.png` versions are image previews of these plans.
+The design uses a cream background, dark green text, and an orange accent. Arial is used for most text, with Georgia for italic highlights.
 
-The assignment still requires a design created in Figma or Canva, a screenshot, and a share link. Bring these SVGs into your chosen design tool, review and customise the layouts, save the file, then capture the design and copy its share link. Check the final design against the implemented page.
+Desktop content appears side by side. On smaller screens, content stacks vertically and project cards wrap to fit the available width.
+
+The Figma file contains Desktop and Mobile pages. I imported the editable SVG layouts and adjusted them in Figma, including the navigation contact text and copyright footer.
+
+The files in the design folder are the original layout assets. The linked Figma file contains my later edits.
+
+## Technologies and features
+
+- HTML5 and CSS3 only
+- Semantic elements such as header, nav, main, section, article, and footer
+- Flexbox for layout
+- Media queries at 900px and 600px
+- Responsive images and heading sizes
+- Hover effects and visible keyboard focus
+- HTML details and summary for expandable project notes
+- Email contact link
+- Local SVG illustrations
+
+No JavaScript or CSS frameworks are used.
 
 ## Files
 
-- `index.html`: page structure and content
-- `style.css`: colours, layout, spacing, hover effects, and responsive rules
-- `images/`: local illustrations for the hero and projects
-- `design/`: desktop and mobile planning artboards
-- `SUBMISSION.md`: remaining requirements and email template
+- index.html — page structure and content
+- style.css — styling and responsive layout
+- images/ — hero and project illustrations
+- design/ — original desktop and mobile layout assets
+- SUBMISSION.md — submission preparation notes
 
 ## Run locally
 
-1. Extract the ZIP file.
-2. Open the `portfolio` folder in VS Code.
-3. Open `index.html` in a browser, or use your installed Live Server extension.
-4. Keep `index.html`, `style.css`, and `images` together so the relative paths work.
+Download and extract the repository, then open index.html in a browser. It can also be opened using Live Server in VS Code.
 
-## Understand the code
+Keep the images folder and style.css in their original locations so the file paths work.
 
-- `header`, `nav`, `main`, `section`, `article`, and `footer` describe the purpose of the content.
-- Links such as `href="#projects"` point to an element with `id="projects"`.
-- The CSS `.container` limits the page width while leaving space on both sides.
-- Flexbox arranges navigation, hero content, project cards, and other sections.
-- `box-sizing: border-box` includes padding and borders in an element's width.
-- `max-width: 100%` keeps images within their container.
-- Media queries at 900px and 600px adjust spacing and stack content on smaller screens.
-- `clamp()` lets heading sizes grow with the screen while keeping a minimum and maximum size. If this is new in class, read the three values as minimum, preferred, and maximum.
-- `details` opens and closes project notes without JavaScript.
-- `:hover` changes link and button appearance; `:focus-visible` helps keyboard users see the selected control.
-- The reduced-motion rule turns off smooth scrolling and transitions for visitors who prefer less motion.
+## Testing and deployment
 
-## Personalise before submission
+The local website was checked in a desktop browser and responsive views, including 400px mobile and 668px tablet widths. Project cards appeared in one column on mobile and two columns at the tested tablet width.
 
-1. The contact email is `daauuddaada77@gmail.com`. Check that it is correct and test its email link.
-2. Check the biography and project descriptions. Remove or rewrite anything you cannot explain or do not want to publish.
-3. Make your own design or content changes and describe them honestly in this README.
-4. Add your actual repository, live website, and Figma/Canva links to `SUBMISSION.md`.
-5. Do not publish your Student ID or private phone number in this repository. Put the required Student ID in the submission email.
+The project navigation, expandable project notes, and email link were manually tested locally.
 
-## Testing
+The website is deployed through GitHub Pages using the main branch and root folder. The live homepage was opened successfully, with its styling and hero image displayed.
 
-Static source checks were performed for section links, local assets, HTML structure, CSS parsing, and the absence of JavaScript. The SVG files were checked as XML. Browser testing and the hosted W3C checks have NOT been completed in this environment.
-
-Before submission, use your browser's responsive view at 1440px desktop, 768px tablet, and 390px mobile. Also check 320px width and zoom to 200%.
-
-Check that:
-- There is no sideways page scrolling or overlapping text.
-- Navigation and Back to top move to the correct sections.
-- Each project note opens and closes.
-- Images load and text stays readable.
-- Tab moves through links and summaries, and the focus outline is visible.
-- The email link opens an email application using your email application.
-- The hover effect changes the main button colour and lifts it slightly.
-
-Record the results you actually observe. Do not claim that a test passed before running it.
-
-## GitHub Pages and validation
-
-Publish this static folder using GitHub Pages. Put `index.html` at the root of the publishing source, with `style.css` and `images` alongside it. Do not upload only the ZIP; extract it and upload the actual files.
-
-When a public URL is available, validate it with:
-- HTML: https://validator.w3.org/
-- CSS: https://jigsaw.w3.org/css-validator/
-
-Fix any reported errors and check the deployed page again. No deployment or validator result is claimed in this package.
+Final HTML and CSS validation with the W3C validators is still pending.
 
 ## AI assistance
 
-ChatGPT helped prepare the initial layout, content, illustrations, HTML/CSS, and documentation. This is an AI-assisted starter. The student still needs to understand the code, personalise it, test it in a browser, and complete the design and deployment work. The assignment warns against submitting unchanged AI-generated work or code that the student does not understand.
+ChatGPT helped generate the initial HTML/CSS, layout assets, content, and documentation. I supplied my personal information and project context, edited the imported layouts in Figma, tested the local website, uploaded the files to GitHub, and configured GitHub Pages.
+
+This is an AI-assisted learning project. I am still learning the HTML and CSS techniques used in it.
