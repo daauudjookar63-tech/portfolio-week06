@@ -38,7 +38,11 @@ Desktop content appears side by side. On smaller screens, content stacks vertica
 
 The Figma file contains Desktop and Mobile pages. I imported the editable SVG layouts and adjusted them in Figma, including the navigation contact text and copyright footer.
 
-The files in the design folder are the original layout assets. The linked Figma file contains my later edits.
+The latest Figma exports are:
+- design/desktop-plan 1.png
+- design/mobile-plan 2.png
+
+The other files in the design folder are the original layout assets.
 
 ## Technologies and features
 
