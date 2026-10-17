@@ -1,0 +1,136 @@
+/* 1. Reusable colours and basic styles */
+:root {
+  --paper: #f6f5ee;
+  --ink: #1b342e;
+  --muted: #53665f;
+  --line: #d4dbce;
+  --orange: #aa4526;
+  --light: #e9eddf;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; line-height: 1.65; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; text-underline-offset: .25em; }
+button, input, textarea { font: inherit; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { line-height: 1.12; letter-spacing: -.045em; }
+h1 { font-size: clamp(2.7rem, 5.8vw, 5.6rem); margin-bottom: 1.4rem; }
+h2 { font-size: clamp(2.15rem, 4vw, 3.8rem); margin-bottom: 1.2rem; }
+h3 { font-size: 1.5rem; }
+em { font-family: Georgia, 'Times New Roman', serif; font-weight: normal; }
+.container { width: 88%; max-width: 1200px; margin: 0 auto; }
+.section { padding: 5.5rem 0; }
+section[id] { scroll-margin-top: 1rem; }
+.eyebrow, .section-label > span { font-size: .76rem; font-weight: bold; letter-spacing: .13em; text-transform: uppercase; }
+:focus-visible { outline: 3px solid var(--orange); outline-offset: 5px; }
+.skip-link { position: absolute; top: -100px; left: 1rem; padding: .75rem 1rem; background: var(--ink); color: white; z-index: 2; }
+.skip-link:focus { top: 1rem; }
+
+/* 2. Header: Flexbox keeps the logo and navigation on one row. */
+.site-header { border-bottom: 1px solid var(--line); }
+.navigation { display: flex; align-items: center; justify-content: space-between; min-height: 90px; gap: 1.5rem; }
+.brand { font-size: 1.9rem; font-weight: bold; letter-spacing: -.08em; text-decoration: none; }
+.brand span { color: var(--orange); }
+.nav-links { display: flex; flex-wrap: wrap; gap: 2rem; list-style: none; margin: 0; padding: 0; font-size: .9rem; }
+.nav-links a { text-decoration: none; padding: .4rem 0; border-bottom: 1px solid transparent; transition: color .2s, border-color .2s; }
+.nav-links a:hover { color: var(--orange); border-color: var(--orange); }
+
+/* 3. Hero section */
+.hero { display: flex; align-items: center; gap: 4%; padding-top: 5rem; padding-bottom: 5rem; }
+.hero-copy { flex: 1.3; min-width: 0; }
+.hero-art { flex: 1; min-width: 0; }
+.hero-art img { width: 100%; }
+.hero .eyebrow { letter-spacing: .06em; }
+.status-dot { display: inline-block; width: .55rem; height: .55rem; border-radius: 50%; background: var(--orange); margin-right: .5rem; }
+.intro { max-width: 35rem; color: var(--muted); font-size: 1.05rem; }
+.hero-actions { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+.button { display: inline-flex; align-items: center; gap: 1.3rem; padding: .9rem 1.25rem; background: var(--ink); color: white; text-decoration: none; font-size: .9rem; border-radius: 4px; transition: background .2s, transform .2s; }
+.button:hover { background: var(--orange); transform: translateY(-3px); }
+.text-link { font-size: .9rem; }
+.art-caption { margin: 1rem 0 0; font-size: .8rem; text-align: center; color: var(--muted); }
+
+/* 4. About section */
+.about { background: var(--light); }
+.section-layout { display: flex; gap: 8%; }
+.section-label { flex: 1; }
+.section-label > span { display: block; margin-bottom: 1.3rem; }
+.about-content, .skill-list { flex: 2; min-width: 0; }
+.about-content > p { max-width: 44rem; }
+.large-text { font-size: 1.6rem; line-height: 1.4; letter-spacing: -.025em; }
+.profile-facts { display: flex; gap: 1.5rem; flex-wrap: wrap; margin: 2rem 0 0; padding-top: 1.5rem; border-top: 1px solid #bcc7b5; }
+.profile-facts > div { flex: 1 1 140px; }
+dt { color: var(--muted); font-size: .78rem; }
+dd { margin: .25rem 0 0; font-size: .9rem; font-weight: bold; }
+
+/* 5. Project cards use a wrapping Flexbox row. */
+.section-top { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; margin-bottom: 2rem; }
+.section-top > p { color: var(--muted); font-size: .9rem; }
+.project-list { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: flex-start; }
+.project-card { flex: 1 1 260px; min-width: 0; border-bottom: 1px solid var(--line); }
+.project-image { width: 100%; border-radius: 7px; }
+.project-content { padding: 1.4rem 0 1.5rem; }
+.project-meta { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; font-size: .63rem; letter-spacing: .04em; }
+.badge { padding: .15rem .5rem; border: 1px solid var(--line); border-radius: 20px; font-size: .66rem; }
+.project-content h3 { margin-bottom: .75rem; }
+.project-content p { color: var(--muted); font-size: .92rem; }
+summary { cursor: pointer; font-size: .85rem; font-weight: bold; padding: .4rem 0; }
+summary:hover { color: var(--orange); }
+details[open] summary { margin-bottom: .75rem; }
+
+/* 6. Skills and contact */
+.skills { background: var(--ink); color: var(--paper); }
+.skills .section-label > p { color: #c5d0c8; }
+.skill-row { display: flex; align-items: center; gap: 1.1rem; padding: 1.5rem 0; border-bottom: 1px solid #53685f; }
+.skill-row:first-child { padding-top: 0; }
+.skill-number { color: #c5d0c8; font-size: .75rem; }
+.skill-row > div { flex: 1; }
+.skill-row h3 { font-size: 1.35rem; margin-bottom: .5rem; }
+.skill-row p { margin-bottom: 0; color: #c5d0c8; font-size: .85rem; }
+.skill-level { font-size: .7rem; border: 1px solid #718679; padding: .3rem .6rem; border-radius: 20px; }
+.contact-layout { display: flex; align-items: flex-start; gap: 10%; margin-top: 1.5rem; }
+.contact-layout h2 { flex: 1.4; }
+.contact-details { flex: 1; color: var(--muted); }
+.contact-placeholder { font-size: .85rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.site-footer { border-top: 1px solid var(--line); padding: 1.5rem 0; font-size: .75rem; }
+.footer-layout { display: flex; justify-content: space-between; flex-wrap: wrap; gap: .75rem 1.5rem; }
+.footer-layout p { margin: 0; }
+
+/* 7. Tablet: stack major sections and let cards wrap. */
+@media (max-width: 900px) {
+  .hero { gap: 2rem; }
+  .hero-copy { flex: 1.5; }
+  .hero .eyebrow { font-size: .65rem; }
+  .section { padding: 4rem 0; }
+  .section-layout { gap: 5%; }
+  .section-top { display: block; }
+  .skill-row { flex-wrap: wrap; }
+  .skill-level { margin-left: 2rem; }
+}
+
+/* 8. Mobile: keep links visible, stack content, and use readable spacing. */
+@media (max-width: 600px) {
+  .container { width: 90%; }
+  .navigation { flex-direction: column; align-items: flex-start; gap: .5rem; padding: 1rem 0; }
+  .nav-links { width: 100%; justify-content: space-between; gap: .6rem; font-size: .85rem; }
+  .hero { flex-direction: column; align-items: stretch; padding: 3rem 0; }
+  .hero .eyebrow { font-size: .66rem; }
+  .hero-art { width: 85%; max-width: 350px; margin: 1rem auto 0; }
+  .section-layout, .contact-layout { flex-direction: column; gap: 1.5rem; }
+  .section { padding: 3rem 0; }
+  .section-label h2 br { display: none; }
+  .large-text { font-size: 1.35rem; }
+  .project-list { flex-direction: column; }
+  .project-card { flex: auto; width: 100%; }
+  .skill-list { width: 100%; }
+  .skill-row h3 { font-size: 1.15rem; }
+  .skill-level { margin-left: 0; }
+  .footer-layout { flex-direction: column; }
+}
+
+/* Respect users who prefer less motion. */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+  .button:hover { transform: none; }
+}
