@@ -76,7 +76,9 @@ The project navigation, expandable project notes, and email link were manually t
 
 The website is deployed through GitHub Pages using the main branch and root folder. The live homepage was opened successfully, with its styling and hero image displayed.
 
-Final HTML and CSS validation with the W3C validators is still pending.
+Validated on 17 October 2026:
+- W3C HTML Checker: no errors or warnings.
+- W3C CSS Validator: no errors found.
 
 ## AI assistance
 
